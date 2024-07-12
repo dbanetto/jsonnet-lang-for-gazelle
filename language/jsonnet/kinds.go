@@ -35,7 +35,7 @@ var (
 	}
 	jsonnetLoads = []rule.LoadInfo{
 		{
-			Name: "@io_bazel_rules_jsonnet//jsonnet:jsonnet.bzl",
+			Name: "@rules_jsonnet//jsonnet:jsonnet.bzl",
 			Symbols: []string{
 				libraryRule,
 				toJSONRule,

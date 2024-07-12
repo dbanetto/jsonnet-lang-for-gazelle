@@ -1,16 +1,18 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+load("@rules_go//go:def.bzl", "go_library", "go_test")
 
 go_library(
     name = "go_default_library",
     srcs = ["fileinfo.go"],
     importpath = "github.com/vmware/jsonnet-lang-for-gazelle/language/jsonnet/fileinfo",
     visibility = ["//visibility:public"],
-    deps = ["@bazel_gazelle//label:go_default_library"],
+    deps = ["@gazelle//label:go_default_library"],
 )
 
 go_test(
     name = "go_default_test",
     srcs = ["fileinfo_test.go"],
-    embed = [":go_default_library"],
-    deps = ["@bazel_gazelle//label:go_default_library"],
+    deps = [
+        ":go_default_library",
+        "@gazelle//label:go_default_library",
+    ],
 )

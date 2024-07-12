@@ -1,0 +1,18 @@
+module(
+    name = "gazelle_jsonnet_example",
+    repo_name = "com_github_gazelle_jsonnet",
+)
+
+# ========================================================================
+# Bazel modules
+# ========================================================================
+bazel_dep(name = "gazelle", version = "0.37.0")
+bazel_dep(name = "rules_jsonnet", version = "0.6.0")
+
+bazel_dep(name = "jsonnet_gazelle", version = "0.6.0")
+
+
+local_path_override(
+    module_name = "jsonnet_gazelle",
+    path = "..",
+)

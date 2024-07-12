@@ -26,7 +26,7 @@ def jsonnet_library(name, srcs, visibility, deps = []): native.filegroup(
 
 # BUILD.bazel
 #
-# load("@bazel_gazelle//:def.bzl", "DEFAULT_LANGUAGES", "gazelle", "gazelle_binary")
+# load("@gazelle//:def.bzl", "DEFAULT_LANGUAGES", "gazelle", "gazelle_binary")
 #
 # gazelle_binary(
 #     name = "gazelle_jsonnet_binary",
